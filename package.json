@@ -65,10 +65,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mahmudqudrati/mq-file-uploader"
+    "url": "https://github.com/mahmudulhaquequdrati/mq-file-uploader"
   },
-  "homepage": "https://github.com/mahmudqudrati/mq-file-uploader#readme",
+  "homepage": "https://github.com/mahmudulhaquequdrati/mq-file-uploader#readme",
   "bugs": {
-    "url": "https://github.com/mahmudqudrati/mq-file-uploader/issues"
+    "url": "https://github.com/mahmudulhaquequdrati/mq-file-uploader/issues"
   }
 }
