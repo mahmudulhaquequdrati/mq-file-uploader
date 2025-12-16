@@ -1,0 +1,404 @@
+/* =====================================================
+   @mq/file-uploader - Default Styles
+   Modern, clean design with smooth animations
+   ===================================================== */
+
+:root {
+  --mq-primary: #6366f1;
+  --mq-primary-hover: #4f46e5;
+  --mq-success: #10b981;
+  --mq-error: #ef4444;
+  --mq-warning: #f59e0b;
+  --mq-gray-50: #f9fafb;
+  --mq-gray-100: #f3f4f6;
+  --mq-gray-200: #e5e7eb;
+  --mq-gray-300: #d1d5db;
+  --mq-gray-400: #9ca3af;
+  --mq-gray-500: #6b7280;
+  --mq-gray-600: #4b5563;
+  --mq-gray-700: #374151;
+  --mq-gray-800: #1f2937;
+  --mq-gray-900: #111827;
+  --mq-radius: 12px;
+  --mq-radius-sm: 8px;
+  --mq-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --mq-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --mq-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================================
+   Drop Zone
+   ===================================================== */
+
+.mq-dropzone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+  border: 2px dashed var(--mq-gray-300);
+  border-radius: var(--mq-radius);
+  background: linear-gradient(135deg, var(--mq-gray-50) 0%, white 100%);
+  cursor: pointer;
+  transition: var(--mq-transition);
+  outline: none;
+}
+
+.mq-dropzone:hover {
+  border-color: var(--mq-primary);
+  background: linear-gradient(135deg, #eef2ff 0%, white 100%);
+}
+
+.mq-dropzone:focus-visible {
+  border-color: var(--mq-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+.mq-dropzone--dragging {
+  border-color: var(--mq-primary);
+  border-style: solid;
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  transform: scale(1.01);
+}
+
+.mq-dropzone--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.mq-dropzone__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: var(--mq-gray-400);
+  transition: var(--mq-transition);
+}
+
+.mq-dropzone:hover .mq-dropzone__icon,
+.mq-dropzone--dragging .mq-dropzone__icon {
+  color: var(--mq-primary);
+  transform: translateY(-4px);
+}
+
+.mq-dropzone__text {
+  text-align: center;
+}
+
+.mq-dropzone__title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--mq-gray-700);
+}
+
+.mq-dropzone__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--mq-gray-500);
+}
+
+.mq-dropzone__browse {
+  color: var(--mq-primary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* =====================================================
+   File List
+   ===================================================== */
+
+.mq-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* =====================================================
+   File Preview Card
+   ===================================================== */
+
+.mq-file-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  background: white;
+  border: 1px solid var(--mq-gray-200);
+  border-radius: var(--mq-radius-sm);
+  box-shadow: var(--mq-shadow);
+  transition: var(--mq-transition);
+}
+
+.mq-file-preview:hover {
+  border-color: var(--mq-gray-300);
+  box-shadow: var(--mq-shadow-lg);
+}
+
+.mq-file-preview--success {
+  border-color: var(--mq-success);
+  background: linear-gradient(135deg, #ecfdf5 0%, white 100%);
+}
+
+.mq-file-preview--error {
+  border-color: var(--mq-error);
+  background: linear-gradient(135deg, #fef2f2 0%, white 100%);
+}
+
+.mq-file-preview__thumbnail {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--mq-radius-sm);
+  background: var(--mq-gray-100);
+  overflow: hidden;
+}
+
+.mq-file-preview__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mq-file-preview__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--mq-gray-400);
+}
+
+.mq-file-preview__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mq-file-preview__name {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--mq-gray-700);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mq-file-preview__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--mq-gray-500);
+}
+
+.mq-file-preview__error {
+  color: var(--mq-error);
+  font-size: 0.75rem;
+}
+
+.mq-file-preview__remove {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--mq-gray-100);
+  color: var(--mq-gray-500);
+  cursor: pointer;
+  transition: var(--mq-transition);
+}
+
+.mq-file-preview__remove:hover {
+  background: var(--mq-error);
+  color: white;
+}
+
+/* =====================================================
+   Progress Bar
+   ===================================================== */
+
+.mq-progress {
+  width: 100%;
+  height: 6px;
+  background: var(--mq-gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mq-progress__bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--mq-primary) 0%, #818cf8 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.mq-progress--success .mq-progress__bar {
+  background: linear-gradient(90deg, var(--mq-success) 0%, #34d399 100%);
+}
+
+.mq-progress--error .mq-progress__bar {
+  background: linear-gradient(90deg, var(--mq-error) 0%, #f87171 100%);
+}
+
+.mq-progress__text {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--mq-gray-500);
+  text-align: right;
+}
+
+/* =====================================================
+   Upload Button
+   ===================================================== */
+
+.mq-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--mq-primary) 0%, #4f46e5 100%);
+  border: none;
+  border-radius: var(--mq-radius-sm);
+  box-shadow: var(--mq-shadow);
+  cursor: pointer;
+  transition: var(--mq-transition);
+}
+
+.mq-upload-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  transform: translateY(-1px);
+  box-shadow: var(--mq-shadow-lg);
+}
+
+.mq-upload-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.mq-upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mq-upload-btn--loading {
+  position: relative;
+  color: transparent;
+}
+
+.mq-upload-btn--loading::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: mq-spin 0.8s linear infinite;
+}
+
+@keyframes mq-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   Error List
+   ===================================================== */
+
+.mq-error-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.mq-error-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--mq-error);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--mq-radius-sm);
+}
+
+.mq-error-item__icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* =====================================================
+   Animations
+   ===================================================== */
+
+@keyframes mq-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mq-file-preview {
+  animation: mq-fade-in 0.3s ease;
+}
+
+/* =====================================================
+   Dark Mode Support
+   ===================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mq-gray-50: #1f2937;
+    --mq-gray-100: #374151;
+    --mq-gray-200: #4b5563;
+    --mq-gray-300: #6b7280;
+    --mq-gray-400: #9ca3af;
+    --mq-gray-500: #d1d5db;
+    --mq-gray-600: #e5e7eb;
+    --mq-gray-700: #f3f4f6;
+    --mq-gray-800: #f9fafb;
+    --mq-gray-900: #ffffff;
+  }
+
+  .mq-dropzone {
+    background: linear-gradient(135deg, var(--mq-gray-50) 0%, #111827 100%);
+  }
+
+  .mq-dropzone:hover {
+    background: linear-gradient(135deg, #1e1b4b 0%, #111827 100%);
+  }
+
+  .mq-file-preview {
+    background: #111827;
+    border-color: var(--mq-gray-200);
+  }
+
+  .mq-file-preview--success {
+    background: linear-gradient(135deg, #064e3b 0%, #111827 100%);
+  }
+
+  .mq-file-preview--error {
+    background: linear-gradient(135deg, #7f1d1d 0%, #111827 100%);
+  }
+}
