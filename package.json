@@ -1,6 +1,6 @@
 {
   "name": "mq-file-uploader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, customizable React file upload library with drag-drop, previews, and progress tracking",
   "type": "module",
   "main": "./dist/index.cjs",
